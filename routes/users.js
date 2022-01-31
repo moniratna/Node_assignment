@@ -48,7 +48,7 @@ router.post('/register', async (req, res) => {
         });
         await user.save();
         sendMail(req.body.email)
-        res.send(user);
+        res.send("Please Check your spam folder for the confirmation mail",user);
     }
 });
 
