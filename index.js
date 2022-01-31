@@ -11,6 +11,9 @@ mongoose.connect('mongodb+srv://moniratna:moni98@cluster0.ghk0c.mongodb.net/myFi
 
 app.use(express.json());
 app.use('/api/users', users);
+app.get('/',(req,res)=>{
+    res.send('Hello World');
+})
 
 const port = process.env.PORT || 4000;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
